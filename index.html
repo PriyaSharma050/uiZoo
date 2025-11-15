@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uiZoo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preloader.css">
+</head>
+<body>
+    
+    <div id="preloader">
+        <p id="uiZ">uiZ</p>
+        <div class="loader">
+            <svg width="40%" height="50%" viewBox="0 0 64 64">
+                <circle cx="20" cy="24" r="8.5" fill="#ffffff" class="eye"/>
+                <circle cx="40" cy="24" r="8.5" fill="#ffffff" class="eye"/>
+                <path d="M16 40 Q32 52 44 40" stroke="#F9C301" stroke-width="4" fill="none" stroke-linecap="round" class="smile" />
+            </svg>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div>
+                <img id="logo" src="assets/logo/uiZooLogoDarkMode.png" alt="uiZoo logo">
+            </div>
+            <div id="hyperlinks">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li id="navElement">
+                        <a href="elements.html">Elements</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div id="mode">
+                <img  id="modeIcon" src="assets/icons/mode/lightMode.png" alt="Light Mode" title="Mode">
+            </div>
+            
+            <div>
+                <button class="more-btn">⋮</button>
+                <ul class="more-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li>
+                        <a href="elements.html">Elements</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="heroSection">
+        <div id="elementSearch">
+            <div id="lookingFor">
+                <p>Looking for</p>
+                <div class="words">
+                    <span class="word">buttons</span>
+                    <span class="word">forms</span>
+                    <span class="word">switches</span>
+                    <span class="word">cards</span>
+                    <span class="word">buttons</span>
+                </div>
+                <p>?</p>
+            </div>
+
+            <div id="searchBar">
+                <input type="text" id="searchBox" placeholder="&#128269 Search">
+            </div>
+
+            <div id="browseAll">
+                <a href="elements.html">
+                    <button id="browseAllBtn">
+                    Browse all &#8594
+                    </button>
+                </a>                
+            </div>
+
+        </div>
+        <div id="heroSectionElements">
+
+            <div>
+                <div></div>
+                <div></div>
+                <div id="divNo1" class="heroSectionElements"></div>
+            </div>
+            <div>
+                <div id="divNo2" class="heroSectionElements"></div>
+                <div id="divNo3" class="heroSectionElements"></div>
+                <div id="divNo4" class="heroSectionElements"></div>
+            </div>
+            <div>
+                <div id="divNo5" class="heroSectionElements"></div>
+                <div id="divNo6" class="heroSectionElements"></div>
+                <div id="divNo7" class="heroSectionElements"></div>
+            </div>
+            <div>
+                <div id="divNo8" class="heroSectionElements"></div>
+                <div id="divNo9" class="heroSectionElements"></div>
+                <div id="divNo10" class="heroSectionElements"></div>
+            </div>
+
+        </div>
+
+        <div id="heroSectionEnd"></div>
+
+    </section>
+
+    <section id="features">
+        <div id="featuresImage">
+            <img src="assets/images/featuresImage.png" class="smallImage" alt="Features">
+            <img src="assets/images/featuresImage.png" class="bigImage" alt="Features">
+        </div>
+        <div id="featuresText">
+            <h2>Features</h2>
+          <dl>
+            <dt><b>Simple & Clean:</b></dt>
+            <dd>Built only with HTML and CSS.</dd>
+
+            <dt><b>Copy-Ready Code:</b></dt>
+            <dd>Instantly copy and use components in your own projects.</dd>
+
+            <dt><b>Customizable:</b></dt>
+            <dd>Easily change colors, sizes, and styles to match your theme.</dd>
+
+            <dt><b>Light / Dark Mode:</b></dt>
+            <dd>View and copy components in both light and dark styles.</dd>
+
+            <dt><b>Interactive Previews:</b></dt>
+            <dd>See how elements look in real time before copying.</dd>                     
+          </dl>
+        </div>
+    </section>
+
+    <footer>
+        <div id="contactUs">
+            <form name="contact" id="contactForm" netlify>
+                <input type="hidden" name="form-name" value="contact">
+                <h2>Contact Us</h2>
+                <div id="contactContainer">
+                    <div class="contactItem">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" required>
+                    </div>
+                    <br>
+                    <div  class="contactItem">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" required>
+                    </div>
+                    <br>
+                    <div id="messageDiv">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="3" name="message" placeholder="Type your message..." required></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" style="display:none;"></button>
+                </div>
+            </form>
+        </div>
+        <div id="authorDiv">
+            <div id="footerLogo"><img src="assets/logo/uiZooLogoDarkMode.png" id="footerLogoImage" alt="uiZoo Logo"></div>
+            <div id="author">
+                <a id="github" href="https://github.com/PriyaSharma050" target="_blank"><img id="githubIcon" src="assets/icons/githubDarkModeIcon.png" width="40px" alt="Github icon"> <b>Github</b></a>
+
+            <p role="contentinfo" id="copyright">
+                &copy; 2025 
+                <a href="https://github.com/PriyaSharma050" target="_blank">Priya Sharma.</a>
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/elements.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uiZoo-About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img id="logo" src="assets/logo/uiZooLogoDarkMode.png" alt="uiZoo logo">
+            </div>
+            <div id="hyperlinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="navElement">
+                        <a href="elements.html">Elements</a>
+                    </li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div id="mode">
+                <img  id="modeIcon" src="assets/icons/mode/lightMode.png" alt="Light Mode" title="Mode">
+            </div>
+            
+            <div>
+                <button class="more-btn">⋮</button>
+                <ul class="more-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li>
+                        <a href="elements.html">Elements</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div>
+            <h2>About Us</h2>
+            <p><span style="font-weight: 550;">Welcome to <span style="color:rgb(64, 207, 207)">uiZ</span>oo — your creative playground for free, open-source UI components! Whether you need a sleek button, a stylish card, or an eye-catching loader, we've got you covered.</span><br> Our mission is to make great design simple, fast, and accessible to everyone. Browse through a vibrant collection of ready-to-use components, copy the code, customize it your way, and bring your ideas to life in seconds. At <span style="color:rgb(64, 207, 207)">uiZ</span>oo, design meets fun and functionality — no limits, no paywalls, just pure creativity at your fingertips.<br> <br>Start exploring and build something awesome today!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div id="contactUs">
+            <form name="contact" id="contactForm" netlify>
+                <input type="hidden" name="form-name" value="contact">
+                <h2>Contact Us</h2>
+                <div id="contactContainer">
+                    <div class="contactItem">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" name="name" required>
+                    </div>
+                    <br>
+                    <div  class="contactItem">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" required>
+                    </div>
+                    <br>
+                    <div id="messageDiv">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" rows="3" name="message" placeholder="Type your message..." required></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" style="display:none;"></button>
+                </div>
+            </form>
+        </div>
+        <div id="authorDiv">
+            <div id="footerLogo"><img src="assets/logo/uiZooLogoDarkMode.png" id="footerLogoImage" alt="uiZoo Logo"></div>
+            <div id="author">
+                <a id="github" href="https://github.com/PriyaSharma050" target="_blank"><img id="githubIcon" src="assets/icons/githubDarkModeIcon.png" width="40px" alt="Github icon"> <b>Github</b></a>
+
+            <p role="contentinfo" id="copyright">
+                &copy; 2025 
+                <a href="https://github.com/PriyaSharma050" target="_blank">Priya Sharma.</a>
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

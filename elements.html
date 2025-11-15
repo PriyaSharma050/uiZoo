@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uiZoo-Elements</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/elements.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img id="logo" src="assets/logo/uiZooLogoDarkMode.png" alt="uiZoo logo">
+            </div>
+            <div id="hyperlinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="navElement">
+                        <a href="elements.html" class="active">Elements</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div id="mode">
+                <img  id="modeIcon" src="assets/icons/mode/lightMode.png" alt="Light Mode" title="Mode">
+            </div>
+            
+            <div>
+                <button class="more-btn">⋮</button>
+                <ul class="more-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li>
+                        <a href="elements.html">Elements</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="filterIcon" class="filter-icon">Filter  &#x2295;</div> 
+    
+    <div id="elements">
+        <div id="elementBar">
+            <button id="filterCloseBtn">&times;</button>
+            <h2>UI Elements</h2>
+            <button onclick="filterDivs('all')">All</button>
+            <button onclick="filterDivs('alerts')">Alerts</button>
+            <button onclick="filterDivs('buttons')">Buttons</button>
+            <button onclick="filterDivs('cards')">Cards</button>
+            <button onclick="filterDivs('checkboxes')">Checkboxes</button>
+            <button onclick="filterDivs('dropdowns')">Dropdowns</button>
+            <button onclick="filterDivs('icons')">Icons</button>
+            <button onclick="filterDivs('inputs')">Inputs</button>
+            <button onclick="filterDivs('loaders')">Loaders</button>
+            <button onclick="filterDivs('radioButtons')">Radio Buttons</button>
+            <button onclick="filterDivs('toggleSwitches')">Toggle Switches</button>
+        </div>
+        
+        <div id="uiElements">
+            <div class="scrollElements" id="b">
+            </div>            
+        </div>
+
+    </div>
+    
+    <script src="js/scripts.js"></script>
+    <script src="js/elements.js"></script>
+</body>
+</html>

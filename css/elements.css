@@ -1,0 +1,450 @@
+h2{
+    text-align: center;
+    margin-top: 20%;
+    color: rgb(0, 255, 68);
+}
+
+#elements{
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 100vw;
+    position: fixed;
+    top: 20%;
+}
+
+#elementBar{
+    width: 20%;
+    background-color: #36454F;
+    border-radius: 12px;
+    position: fixed;
+    left: 2%;
+    top: 20%;
+    bottom: 5%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    display: block;
+}
+
+#elementBar button{
+    color: white;
+    font-size: 1.5rem;
+    background-color: #36454F;
+    border: none;
+    margin: 1%;
+    text-align: left;
+    margin-left: 10%;
+    cursor: pointer;
+    width: 90%;
+}
+
+#elementBar button:hover{
+    color: rgb(0, 255, 68);
+}
+
+#elementBar button.active {
+    color: rgb(0, 255, 68);
+}
+
+.hide{
+    display: none;
+}
+
+/* Elements */
+
+#uiElements{
+    width: 72%;
+    position: relative;
+    left: 25%;
+    right: 0;
+    top: 0;
+}
+
+.scrollElements{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 15px;
+    justify-content: left;
+    align-items: center;
+}
+
+.box{
+    width: 32%;
+    height: 200px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.box.expanded {
+    position: fixed;
+    top: var(--b-top);
+    left: var(--b-left);
+    width: var(--b-width);
+    height: var(--b-height);
+    transform: translate(0,0);
+    z-index: 10000000;
+    cursor: default;
+    background-color: #36454F;    
+}
+
+.y {
+    display: none;
+    padding: 20px;    
+}
+
+.box.expanded .x{
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    margin: 5%;
+}
+
+.box .x{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.x .xFeatureDiv{
+    display: none;
+}
+
+.box.expanded .xFeatureDiv{
+    display: block;
+    height: 8%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+}
+
+.box.expanded .backgroundToggle{
+        width: 15%;
+}
+
+.box.expanded .backgroundColorSelector {
+    border: 5px solid white;
+    height: 80%;
+    border-radius: 8px;
+    width: 12%;
+    cursor: pointer;
+}
+
+.box.expanded .backgroundColorCode p{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.x iframe{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+.box.expanded iframe{
+    pointer-events: auto;
+}
+
+.x .elementDisplay{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.box.expanded .y {
+    display: block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.box.expanded .yFeaturesDiv{
+    height: 10%;
+    width: 100%;
+    background-color: #36454F;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    border-radius: 0;
+}
+
+.box.expanded .yCode{
+    height: 90%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+}
+
+.box.expanded .yCodeFeatures{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    height: 10%;
+    width: 100%;
+    background-color: #36454F;
+}
+
+.box.expanded .htmlCodeBtn{
+    display: flex;
+    flex-direction: row;
+}
+
+.box.expanded .cssCodeBtn{
+    display: flex;
+    flex-direction: row;
+}
+
+.box.expanded .yCodeFeature{
+    height: 100%;
+    width: 30%;
+    cursor: pointer;
+}
+
+.box.expanded .yCodeFeature:hover{
+    background-color: black;
+}
+
+.box.expanded .yCodeFeature.active{
+    background-color: black;
+}
+
+.box.expanded .yCodeFeature p{
+    color: white;
+    font-size: 1.5rem;
+    margin: 10% 10% 10% 1%;
+}
+
+.box.expanded .htmlLogoImage{
+   height: 80%;
+   width: 30%;
+    margin: 4%;
+}
+
+.box.expanded .cssLogoImage{
+   height: 78%;
+   width: 30%;
+    margin: 4%;
+}
+
+.box.expanded .backgroundToggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box.expanded .backgroundToggle:hover {
+    transform: scale(1.1);
+}
+
+.box.expanded .backgroundColorSelector:hover {
+    transform: scale(1.1);
+}
+
+.box.expanded .yFeatures{
+    height: 100%;
+    width: 10%;
+}
+
+.box.expanded .closeBtn {
+    border-radius: 50%;
+    height: 90%;
+    width: 10%;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.box.expanded .copyCode button{
+    background-color: #36454F;
+    height: 100%;
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: center;
+    border: none;    
+}
+
+.box:not(.expanded):hover {
+    transform: scale(1.2); 
+}
+
+.scrollElements::-webkit-scrollbar {
+    width: 8px;
+    position: relative;
+    right: 0;
+}
+.scrollElements::-webkit-scrollbar-track{
+    background: #36454F;
+}
+
+.scrollElements::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+.light-mode .scrollElements::-webkit-scrollbar {
+    background-color: black;
+}
+
+.box.expanded .editor{
+    height: 90%;
+    width: 100%;
+}
+
+.box.expanded .codeEditor {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    box-sizing: border-box;
+    display: none;
+    font-size: 1.2rem;
+    overflow-y: auto;
+    background-color: #36454F;
+    color: white;
+    border: none;
+    font-family: monospace;
+}
+
+.box.expanded .codeEditor::-webkit-scrollbar {
+    width: 8px;
+}
+.box.expanded .codeEditor::-webkit-scrollbar-track{
+    background: #36454F;
+} 
+
+.box.expanded .codeEditor::-webkit-scrollbar-thumb{
+    background: white;
+} 
+
+.box.expanded .codeEditor:focus{
+    outline: none;
+    border: 2px solid black;
+}
+
+.box.expanded .codeEditor.active{
+    display: block;
+}
+
+.filter-icon {
+    display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+#filterCloseBtn{
+    display: none;
+    position: relative;
+    left: 80%;
+    top: 2%;
+    cursor: pointer;
+    background-color: none;
+    color: white;
+    font-size: 5rem;
+}
+
+@media (max-width: 768px) {
+    #elementBar{
+        display: none;
+        width: 90%;
+        height: 85%;
+        flex-direction: column;
+        top: 10%;
+        left: 5%;
+    }
+
+    #elementBar button:not(#filterCloseBtn) {
+    width: 90%;
+}
+
+    #uiElements{
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    #elementBar h2{
+        margin-top: 10%;
+    }
+
+
+    .scrollElements{
+    justify-content: center;
+    }
+
+    .box{
+    width: 90%;
+    height: 200px;
+    }
+
+    .filter-icon {
+    display: block;
+    margin-top: 10px;
+}
+
+#filterCloseBtn{
+    display: block; 
+}
+
+.box.expanded .closeBtn{
+    margin-left: 30%;
+    margin-right: 10%;
+}
+
+.box.expanded .yCodeFeature{
+    width: 50%;
+    
+}
+
+.box.expanded .yCodeFeature p{
+    font-size: 1.2rem;
+}
+
+.box.expanded .htmlLogoImage,
+.box.expanded .cssLogoImage{
+   height: 60%;
+}
+
+.box.expanded .backgroundToggle {
+    display: none;
+    
+}
+
+.box.expanded .backgroundColorSelector {
+    height: 50%;
+    border: none;
+}
+
+.box.expanded .backgroundColorCode p{
+    width: 20%;
+    font-size: 1.2rem;
+}
+
+}
