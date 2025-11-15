@@ -1,6 +1,7 @@
 # uiZoo – UI Elements Collection
 
 **[Live Demo (Netlify)](https://uizoo.netlify.app)**  
+**[Live Demo (GitHub Pages)](https://priyasharma050.github.io/uiZoo/)** 
 
 A modern and interactive website showcasing a wide range of **UI elements** with live previews and copy-ready HTML/CSS code. Designed to help developers explore and use a variety of UI elements, including buttons, cards, forms, and loaders.
 
