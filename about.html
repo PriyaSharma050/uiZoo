@@ -49,8 +49,8 @@
 
     <footer>
         <div id="contactUs">
-            <form name="contact" id="contactForm" netlify>
-                <input type="hidden" name="form-name" value="contact">
+            <form name="contactAboutUs" id="contactForm" netlify>
+                <input type="hidden" name="form-name" value="contactAboutUs">
                 <h2>Contact Us</h2>
                 <div id="contactContainer">
                     <div class="contactItem">
@@ -84,6 +84,20 @@
             </p>
         </div>
     </footer>
+    
+    <script>
+        document.querySelectorAll("form").forEach((form) => {
+        const textarea = form.querySelector("textarea");
+            if (textarea) {
+                textarea.addEventListener("keydown", function (e) {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                        e.preventDefault();
+                        form.submit();
+                    }
+                });
+            }
+        });
+    </script>
 
     <script src="js/scripts.js"></script>
 </body>

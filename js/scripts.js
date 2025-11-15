@@ -64,6 +64,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const searchBox = document.getElementById('searchBox');
+searchBox.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        const query = searchBox.value.trim();
+        if (query) {
+            window.location.href = `elements.html?search=${encodeURIComponent(query)}`;
+        }
+    }
+});
+
 // Contact Us
 document.querySelectorAll("form").forEach((form) => {
     const textarea = form.querySelector("textarea");
@@ -74,15 +84,5 @@ document.querySelectorAll("form").forEach((form) => {
                 form.submit();
             }
         });
-    }
-});
-
-const searchBox = document.getElementById('searchBox');
-searchBox.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        const query = searchBox.value.trim();
-        if (query) {
-            window.location.href = `elements.html?search=${encodeURIComponent(query)}`;
-        }
     }
 });
